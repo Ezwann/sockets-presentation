@@ -1,0 +1,13 @@
+<div class="swiper-container swiper-v-container">
+    <div class="swiper-wrapper">
+        <%- include("./defineType", {slide : content.main} ) -%>
+        <% if (content.additionnal) { %>
+            <% content.additionnal.forEach(element => { %>
+                <%- include("./defineType", {slide : element} ) -%>
+            <% }) %>
+        <% } %>
+    </div>
+    <div class="swiper-pagination swiper-v-pagination"></div>
+    <!-- <div class="swiper-button-prev swiper-button-v-prev"></div> -->
+    <!-- <div class="swiper-button-next swiper-button-v-next"></div> -->
+</div>

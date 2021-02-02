@@ -1,0 +1,21 @@
+<% if(slides.length) { %>
+    <div class="swiper-container swiper-h-container">
+        <div class="swiper-wrapper">
+            <% slides.forEach((slide) => { %>
+                <% if(slide.main) { %>
+                <div class="swiper-slide">
+                    <%- include("slides/slide", { content: slide } ) -%>
+                </div>
+                <% } %>
+            <% }); %>
+        </div>
+        <div class="swiper-pagination swiper-h-pagination"></div>
+        <div class="swiper-button-prev swiper-button-h-prev"></div>
+        <div class="swiper-button-next swiper-button-h-next"></div>
+    </div>
+    <button id="goToCurrent" data-index="0" data-sync="true">
+        Go to current
+    </button>
+<% } else { %>
+    <p>No slides here</p>
+<% } %>

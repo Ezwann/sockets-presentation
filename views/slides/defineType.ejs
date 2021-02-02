@@ -1,0 +1,19 @@
+<div class="swiper-slide">
+<% switch(slide.type) {
+    case "text": %>
+        <%- include('./text', {content: slide.content} ) -%>
+    <% break 
+    case "image": %>
+        <%- include('./image', {content: slide.content} ) -%>
+    <% break
+    case "audio": %>
+        <%- include('./audio', {content: slide.content} ) -%>
+    <% break
+    case "video": %>
+        <%- include('./video', {content: slide.content} ) -%>
+    <% break
+    default: %>
+        <%- include('./text', {content: slide.content} ) -%>
+    <% break
+} %>
+</div>
